@@ -46,6 +46,14 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapCategoryRoutes();
+
+        $this->mapProductRoutes();
+
+        $this->mapShopRoutes();
+
+        $this->mapProductShopPriceRoutes();
+
         //
     }
 
@@ -76,5 +84,61 @@ class RouteServiceProvider extends ServiceProvider
             ->middleware('api')
             ->namespace($this->namespace)
             ->group(base_path('routes/api.php'));
+    }
+
+    /**
+     * Define the Category routes of the application.
+     *
+     *
+     * @return void
+     */
+    protected function mapCategoryRoutes()
+    {
+        Route::prefix('api/category')  
+            ->middleware('api') 
+            ->namespace($this->namespace) 
+            ->group(base_path('routes/api.category.php'));
+    }
+
+    /**
+     * Define the Product routes of the application.
+     *
+     *
+     * @return void
+     */
+    protected function mapProductRoutes()
+    {
+        Route::prefix('api/product')  
+            ->middleware('api') 
+            ->namespace($this->namespace) 
+            ->group(base_path('routes/api.product.php'));
+    }
+
+    /**
+     * Define the Shop routes of the application.
+     *
+     *
+     * @return void
+     */
+    protected function mapShopRoutes()
+    {
+        Route::prefix('api/shop')  
+            ->middleware('api') 
+            ->namespace($this->namespace) 
+            ->group(base_path('routes/api.shop.php'));
+    }
+
+    /**
+     * Define the Product Shop Price routes of the application.
+     *
+     *
+     * @return void
+     */
+    protected function mapProductShopPriceRoutes()
+    {
+        Route::prefix('api/product-shop-price')  
+            ->middleware('api') 
+            ->namespace($this->namespace) 
+            ->group(base_path('routes/api.productshopprice.php'));
     }
 }
