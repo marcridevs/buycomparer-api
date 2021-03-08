@@ -10,13 +10,13 @@
 ## Laravel notes
 
 Run laravel app
-[php artisan serve]
+- ``php artisan serve``
 
 Create model with factory, migration, seeder and controller
-[php artisan make:model ModelName -msfc]
+- ``php artisan make:model ModelName -msfc``
 
 Exec migrations with seedeers
-[php artisan migrate:refresh --seed]
+- ``php artisan migrate:refresh --seed``
 
 ## About Laravel
 
