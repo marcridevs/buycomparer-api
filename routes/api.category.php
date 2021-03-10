@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'welcome';
-});
+Route::get('/', 'CategoryController@getAll');
+
+Route::get('/{id}', 'CategoryController@getCategory');
+
+Route::delete('/{id}', 'CategoryController@deleteCategory');
+
+Route::post('/', 'CategoryController@saveCategory');
+
+Route::put('/{id}', 'CategoryController@editCategory');
