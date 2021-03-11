@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->string('img_product');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
