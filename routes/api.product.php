@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'ProductController@getAll');
+Route::get('/all', 'ProductController@getAll');
 
 Route::post('/', 'ProductController@saveProduct');
 
